@@ -29,10 +29,10 @@ Note that in all cases the properties need to be injected, this is done as a com
 
 ### Interactive tests
 ```bash 
-npx cypress open --env url=https://myawaazqa.asianpaints.com/dpstorefront/dp/en/INR/
+npx cypress open --env url=https://myawaazqa.asianpaints.com/dpstorefront/dp/en/INR/emplogin/,username=123456,password=password
 ```
 
 ### Headless tests
 ```bash 
-npx cypress run --env url=https://myawaazqa.asianpaints.com/dpstorefront/dp/en/INR/
+npx cypress run --env url=https://myawaazqa.asianpaints.com/dpstorefront/dp/en/INR/emplogin/,username=123456,password=password
 ```
