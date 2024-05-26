@@ -9,7 +9,7 @@ When(/^the portal is launched and logged in$/, () => {
   cy.login()
 })
 
-Then(/^add a item to cart$/, () => {
+Then(/^add a item to cart from header$/, () => {
   landingPage.clickPlaceOrderButton();
   landingPage.clickAndfillProductName()
   landingPage.selectProduct()
@@ -31,4 +31,30 @@ Then(/^complete the order successfully$/, () => {
 Then(/^validate the order in dashboard$/, () => {
   landingPage.VerifyOrderId()
   landingPage.verifyOrderIdInDashboard()
+})
+
+Then(/^add a item to cart from taskcard$/, () => {
+  landingPage.clickMyOrderMenu()
+  landingPage.clickPlaceOrder()
+})
+
+Then(/^select the quantity$/, () => {
+  landingPage.fill1KGTextbox()
+  landingPage.fill20LTextbox()
+  landingPage.fill40LTextbox()
+})
+
+Then(/^add the item to cart$/, () => {
+  landingPage.clickAddToCartButton()
+  landingPage.proceedToOrder()
+})
+
+Then(/^Open My favorite products$/, () => {
+  landingPage.myFavoriteTab()
+})
+
+Then(/^add a favorite product to cart and place order$/, () => {
+  landingPage.addFavoriteProductToCart()
+  landingPage.headerCartIcon()
+  landingPage.clickSubmitOrder()
 })

@@ -14,7 +14,6 @@ class LandingPage{
 
   selectShade(){
     cy.get('.order__select--shade > .selectize-control > .selectize-input').click().type("M003").wait(3000)
-  //cy.get('.selectize-input.items.has-options.not-full').click()
   }
 
   fillLitreQiuantity(){
@@ -57,6 +56,54 @@ class LandingPage{
     .should('contain.text', orderId);
 });
 };
+
+clickMyOrderMenu(){
+  cy.get('.left-navigation > .menu > :nth-child(2)').click()
+}
+
+clickPlaceOrder(){
+  cy.get('[style="display: block;"] > .page-place-order > a > .ico-left-menu').click()
+}
+
+schemePlaceOrder(){
+  cy.get('[data-position="1"]').eq(1).click()
+}
+
+fill1KGTextbox(){
+  cy.get('[base-value="1KG"]').eq(1).click().clear().type("20")
+}
+
+fill20LTextbox(){
+  cy.get('[base-value="20 LT"]').eq(1).click().clear().type("6")
+}
+
+fill40LTextbox(){
+  cy.get('[base-value="40 LT"]').eq(1).click().clear().type("47")
+}
+
+clickAddToCartButton(){
+  cy.get('#btn-add-to-cart_new').click()
+}
+
+proceedToOrder(){
+  cy.get('.sales-tracker__placeorder > .btn').click()
+}
+
+myFavoriteTab(){
+  cy.get('#a-tab-myfavourite').click()
+}
+
+addFavoriteProductToCart(){
+  cy.get('#tblmyfavtbd > :nth-child(1) > :nth-child(7) > .iconCart').eq(0).click({force: true})
+}
+
+myFavoriteAddToCart(){
+  cy.get('#btn-addToCart-fromFavorite-cartcomponent').click()
+}
+
+headerCartIcon(){
+  cy.get('.cart-info-redirect').click()
+}
 
 }
 
