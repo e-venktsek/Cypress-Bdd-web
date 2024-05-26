@@ -1,0 +1,35 @@
+{
+  "name": "customer-tests",
+  "version": "1.0.1",
+  "description": "DataHub self service portal cypress bdd",
+  "main": "e2e.js",
+  "scripts": {
+    "cypress:runner": "cypress open",
+    "cypress:test": "cypress run",
+    "start:matrixTest": "npm run --browser=\"${{ matrix.browser }}\" --env TAGS=\"${{ matrix.tags }}\",configFile=${{ matrix.env }}"
+  },
+  "keywords": [
+    "cypress"
+  ],
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.2",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "@reportportal/agent-js-cypress": "^5.1.3",
+    "cypress": "^13.10.0",
+    "cypress-multi-reporters": "^1.6.3",
+    "cypress-otp": "^1.0.3",
+    "cypress-split": "^1.21.0",
+    "fs-extra": "^11.1.1",
+    "multiple-cucumber-html-reporter": "^3.6.2"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "cypress-multi-reporters": "^1.6.3",
+    "debug": "^4.3.4",
+    "dotenv": "^16.4.5",
+    "jsonwebtoken": "^9.0.2",
+    "npm": "^10.5.0",
+    "prettier": "^3.0.3",
+    "uuid": "^9.0.1"
+  }
+}
