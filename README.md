@@ -1,4 +1,4 @@
-# Cypress (cucumber) tests for customer (API Marketplace)
+# Cypress (cucumber) tests for customer (API Marketplace).
 
 # Developer setup
 
