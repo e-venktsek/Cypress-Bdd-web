@@ -13,7 +13,7 @@ class LandingPage{
   }
 
   selectProducts(){
-    return cy.get('.active > .product-select__text').click()
+    return cy.get('.active > .product-select__texthshsdbdndbbdd').click()
   }
 
   selectShade(){
