@@ -12,6 +12,10 @@ class LandingPage{
     return cy.get('.active > .product-select__text').click()
   }
 
+  selectProducts(){
+    return cy.get('.active > .product-select__texthshsdbdndbbdd').click()
+  }
+
   selectShade(){
     cy.get('.order__select--shade > .selectize-control > .selectize-input').click().type("M003").wait(3000)
   }
